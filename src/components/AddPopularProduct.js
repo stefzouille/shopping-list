@@ -1,6 +1,6 @@
 const AddPopularProduct = (props) => {
   const { shopping, addToShoppingList } = props
-  const { populars } = [...props]
+  const populars = [...]
 
   return (
     <section>
@@ -20,5 +20,4 @@ const AddPopularProduct = (props) => {
     </section>
   )
 }
-
 export default AddPopularProduct

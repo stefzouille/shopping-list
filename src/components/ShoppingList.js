@@ -1,20 +1,21 @@
-import { useState } from "react"
-
+import { useState } from "react";
 
 const ShoppingList = (props) => {
-  const { shopping, removeFromShoppingList } = props
-  const [filter, setFilter] = useState([""])
+  const { shopping, removeFromShoppingList } = props;
+  const [filter, setFilter] = useState([""]);
 
   const filteredList = shopping.filter((el) =>
     el.trim().toLowerCase().startsWith(filter.trim().toLowerCase())
-  )
+  );
   return (
     <>
       <h2 className="mb-3 h4">Produits à acheter ({shopping.length}) :</h2>
       <div className="input-group mb-3">
-        <span role="img" aria-label="search" className="input-group-text">
-          🔎
-        </span>
+        <span
+          role="img"
+          aria-label="search"
+          className="input-group-text"
+        ></span>
         <input
           type="search"
           value={filter}
@@ -49,11 +50,11 @@ const ShoppingList = (props) => {
                 removeFromShoppingList={removeFromShoppingList}
               />
             </li>
-          )
+          );
         })}
       </ol>
     </>
-  )
-}
+  );
+};
 
-export default ShoppingList
+export default ShoppingList;
